@@ -80,8 +80,9 @@ def education():
     return jsonify({})
 
 
-@app.route('/resume/skill', methods=['GET', 'POST'])
-def skill():
+@app.route('/resume/skill', methods=['GET', 'POST', 'PUT'])
+@app.route('/resume/skill/<index>', methods=['GET', 'POST'])
+def skill(index=None):
     '''
     Handles Skill requests
     '''
